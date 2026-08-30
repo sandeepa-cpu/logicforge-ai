@@ -1,0 +1,195 @@
+.truth-panel {
+  display: grid;
+  gap: 1.25rem;
+  padding: 1.15rem 1.2rem 1.3rem;
+  border-radius: 0.75rem;
+  border: 1px solid #262626;
+  background: rgba(16, 22, 29, 0.92);
+}
+
+.truth-panel__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.truth-panel h2,
+.truth-panel h3 {
+  margin: 0;
+}
+
+.truth-panel h2 {
+  font-size: 1.25rem;
+}
+
+.sop-panel {
+  padding: 1.15rem 1.2rem 1.3rem;
+  border-radius: 0.75rem;
+  border: 1px solid #262626;
+  background: rgba(16, 22, 29, 0.92);
+}
+
+.sop-panel h2 {
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+}
+
+.sop-panel h3 {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #cbd5e1;
+}
+
+.truth-panel__format fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.truth-panel__format legend {
+  margin-block-end: 0.4rem;
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+.truth-panel__format label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 48px;
+  padding-inline: 0.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  color: #e2e8f0;
+  cursor: pointer;
+}
+
+.truth-panel__format input {
+  accent-color: #34d399;
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.truth-panel__format label:has(input:checked) {
+  border-color: #34d399;
+  background: rgba(52, 211, 153, 0.12);
+}
+
+.truth-panel__format input:focus-visible {
+  outline: 3px solid #38bdf8;
+  outline-offset: 2px;
+}
+
+.truth-panel__table-wrap {
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  max-inline-size: 100%;
+}
+
+.truth-panel table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 22rem;
+}
+
+.truth-panel caption {
+  caption-side: bottom;
+  padding-block-start: 0.75rem;
+  color: #94a3b8;
+  text-align: start;
+  font-size: 0.88rem;
+}
+
+.truth-panel th,
+.truth-panel td {
+  padding: 0.7rem 0.85rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.truth-panel th {
+  color: #cbd5e1;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.truth-panel th.is-output,
+.truth-panel td.is-output {
+  background: rgba(52, 211, 153, 0.12);
+  box-shadow: inset 3px 0 0 #34d399;
+}
+
+.truth-panel th.is-output {
+  color: #6ee7b7;
+}
+
+.truth-bit {
+  display: inline-grid;
+  place-items: center;
+  min-width: 1.75rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.truth-bit--output {
+  min-width: 2rem;
+  min-height: 2rem;
+  border-radius: 999px;
+  font-weight: 800;
+}
+
+.truth-bit--1 {
+  background: rgba(52, 211, 153, 0.22);
+  color: #ecfdf5;
+}
+
+.truth-bit--0 {
+  background: rgba(148, 163, 184, 0.16);
+  color: #cbd5e1;
+}
+
+.truth-panel__steps {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.truth-panel__steps li {
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  background: rgba(8, 12, 18, 0.55);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.truth-panel__steps p {
+  margin: 0.35rem 0 0;
+}
+
+.truth-panel__formula {
+  overflow-x: auto;
+  color: #e2e8f0;
+}
+
+.truth-panel__formula .katex-display {
+  margin: 0.65rem 0 0.15rem;
+}
+
+@media (max-width: 767px) {
+  .truth-panel,
+  .sop-panel {
+    padding: 1rem;
+    border-radius: 0.75rem;
+  }
+
+  .truth-panel th,
+  .truth-panel td {
+    padding: 0.75rem 0.85rem;
+  }
+}

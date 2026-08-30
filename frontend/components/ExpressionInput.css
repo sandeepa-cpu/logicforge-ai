@@ -1,0 +1,132 @@
+.expression-input {
+  margin: 0;
+}
+
+.expression-input__head {
+  margin-block-end: 0.45rem;
+}
+
+.expression-input label {
+  display: block;
+  font-weight: 700;
+  margin-block-end: 0.3rem;
+}
+
+.expression-input__help {
+  margin: 0.2rem 0 0;
+  color: #94a3b8;
+  font-size: 0.88rem;
+}
+
+.expression-input__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 0.5rem;
+}
+
+.expression-input input {
+  flex: 1 1 16rem;
+  min-height: 48px;
+  padding: 0.7rem 0.9rem;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  background: #0b1016;
+  color: #e8eef5;
+  font: inherit;
+  font-size: 1rem;
+}
+
+.expression-input input:focus-visible,
+.expression-input button:focus-visible {
+  outline: 3px solid #38bdf8;
+  outline-offset: 2px;
+}
+
+.expression-input input:user-invalid {
+  border-color: #f87171;
+}
+
+.expression-input__row > button {
+  min-height: 48px;
+  padding: 0.7rem 1.15rem;
+  border: 0;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #7dd3fc, #38bdf8);
+  color: #082f49;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.expression-input button:disabled {
+  opacity: 0.65;
+  cursor: progress;
+}
+
+.expression-input__symbols {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.4rem;
+  margin: 0;
+}
+
+.expression-input__symbols button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 44px;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  background: rgba(8, 12, 18, 0.7);
+  color: #e2e8f0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.expression-input__symbols button span:first-child {
+  color: #5eead4;
+  font-weight: 800;
+}
+
+.expression-input__presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-block-start: 0.5rem;
+  align-items: center;
+}
+
+.expression-input__presets-label {
+  margin: 0 0.15rem 0 0;
+  color: #94a3b8;
+  font-size: 0.82rem;
+}
+
+.expression-input__presets button {
+  min-height: 40px;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(125, 211, 252, 0.28);
+  background: rgba(14, 116, 144, 0.22);
+  color: #e0f2fe;
+  font: inherit;
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+
+.expression-input__error {
+  margin-block-start: 0.75rem;
+  color: #fca5a5;
+}
+
+@media (max-width: 767px) {
+  .expression-input__row > button,
+  .expression-input input,
+  .expression-input__symbols button,
+  .expression-input__presets button {
+    min-height: 48px;
+    padding: 0.75rem 1rem;
+  }
+}

@@ -1,0 +1,138 @@
+.ai-explanation {
+  padding: 1.15rem 1.2rem 1.3rem;
+  border-radius: 0.75rem;
+  border: 1px solid #262626;
+  background: rgba(16, 22, 29, 0.92);
+  font-family: "Noto Sans Sinhala", "Iskoola Pota", "Nirmala UI", "Segoe UI", sans-serif;
+  scroll-margin-top: calc(var(--nav-height) + 8.5rem);
+  scroll-margin-bottom: calc(var(--bottom-nav-height) + 1rem);
+}
+
+.ai-explanation:focus {
+  outline: none;
+}
+
+.ai-explanation:focus-visible {
+  outline: 3px solid #38bdf8;
+  outline-offset: 3px;
+}
+
+.ai-explanation__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.ai-explanation h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.25rem;
+}
+
+.ai-explanation__toolbar p {
+  margin: 0;
+  max-width: 42rem;
+  color: #94a3b8;
+}
+
+.ai-explanation button {
+  min-height: 48px;
+  padding: 0.7rem 1.1rem;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #6ee7b7, #34d399);
+  color: #052e1f;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ai-explanation button:disabled {
+  opacity: 0.7;
+  cursor: progress;
+}
+
+.ai-explanation button:focus-visible {
+  outline: 3px solid #38bdf8;
+  outline-offset: 3px;
+}
+
+.ai-explanation__status {
+  min-height: 1.4rem;
+  margin-block: 0.85rem 0.35rem;
+  color: #5eead4;
+  font-size: 0.9rem;
+}
+
+.ai-explanation__status--error {
+  color: #fca5a5;
+}
+
+.ai-explanation__body {
+  min-height: 8rem;
+  padding: 1rem 1.1rem;
+  border-radius: 12px;
+  background: rgba(8, 12, 18, 0.55);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  line-height: 1.75;
+}
+
+.ai-explanation__body p,
+.ai-explanation__body li {
+  margin: 0 0 0.75rem;
+}
+
+.ai-explanation__body ul {
+  margin: 0 0 0.85rem;
+  padding-inline-start: 1.2rem;
+}
+
+.ai-explanation__body strong {
+  color: #a7f3d0;
+  font-weight: 800;
+}
+
+.ai-explanation__placeholder {
+  color: #94a3b8;
+}
+
+.ai-explanation__caret {
+  display: inline-block;
+  width: 2px;
+  height: 1.05em;
+  margin-inline-start: 2px;
+  background: #34d399;
+  vertical-align: text-bottom;
+  animation: ai-caret 1s step-end infinite;
+}
+
+@keyframes ai-caret {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ai-explanation__caret {
+    animation: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .ai-explanation {
+    padding: 1rem;
+    border-radius: 0.75rem;
+    scroll-margin-top: calc(var(--nav-height) + 1rem);
+  }
+
+  .ai-explanation__toolbar {
+    flex-direction: column;
+  }
+
+  .ai-explanation button {
+    width: 100%;
+    min-height: 48px;
+    padding: 0.75rem 1rem;
+  }
+}

@@ -1,0 +1,14 @@
+# Secrets
+.env
+.env.*
+!.env.example
+.env.local
+.env*.local
+
+# Next.js / Node
+node_modules
+.next
+out
+dist
+*.tsbuildinfo
+npm-debug.log*

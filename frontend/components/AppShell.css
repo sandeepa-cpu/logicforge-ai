@@ -1,0 +1,40 @@
+.app-root {
+  min-height: 100%;
+}
+
+.app-root.is-network {
+  min-height: 100dvh;
+  background:
+    radial-gradient(circle at 12% -8%, rgb(56 189 248 / 0.14), transparent 36%),
+    radial-gradient(circle at 88% 8%, rgb(45 212 191 / 0.1), transparent 34%),
+    radial-gradient(circle at 50% 120%, rgb(99 102 241 / 0.12), transparent 42%),
+    linear-gradient(180deg, #0d1117 0%, #0f172a 48%, #161b22 100%);
+}
+
+.app-root.is-network .navbar,
+.app-root.is-network .app-brand-bar {
+  border-color: #262626;
+  background: rgb(13 17 23 / 0.72);
+}
+
+.app-panel.is-active {
+  animation: tab-in 0.22s ease;
+}
+
+@keyframes tab-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-panel.is-active {
+    animation: none;
+  }
+}

@@ -1,0 +1,202 @@
+.kmap {
+  border: 1px solid #262626;
+  border-radius: 0.75rem;
+  background: rgba(16, 22, 29, 0.92);
+  padding: 0.35rem 1.2rem 1.2rem;
+}
+
+.kmap__summary {
+  list-style: none;
+  cursor: pointer;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.kmap__summary::-webkit-details-marker {
+  display: none;
+}
+
+.kmap__summary::before {
+  content: "";
+  width: 0.55rem;
+  height: 0.55rem;
+  border-right: 2px solid #94a3b8;
+  border-bottom: 2px solid #94a3b8;
+  transform: rotate(-45deg);
+  transition: transform 0.16s ease;
+}
+
+.kmap[open] .kmap__summary::before {
+  transform: rotate(45deg);
+  translate: 0 -0.1rem;
+}
+
+.kmap__summary:focus-visible {
+  outline: 3px solid #38bdf8;
+  outline-offset: 3px;
+  border-radius: 0.4rem;
+}
+
+.kmap__lead,
+.kmap__empty {
+  margin: 0 0 1rem;
+  color: #94a3b8;
+}
+
+.kmap-grid {
+  display: grid;
+  gap: 0.35rem;
+  width: min(100%, 34rem);
+  min-width: 18rem;
+  align-items: stretch;
+}
+
+.kmap-grid__corner {
+  position: relative;
+  min-height: 2.4rem;
+}
+
+.kmap-grid__rowvars,
+.kmap-grid__colvars {
+  position: absolute;
+  color: #5eead4;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.kmap-grid__rowvars {
+  left: 0.15rem;
+  bottom: 0.15rem;
+}
+
+.kmap-grid__colvars {
+  right: 0.15rem;
+  top: 0.15rem;
+}
+
+.kmap-grid__colhead,
+.kmap-grid__rowhead {
+  display: grid;
+  place-items: center;
+  color: #cbd5e1;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.82rem;
+}
+
+.kmap-row {
+  display: contents;
+}
+
+.kmap-cell {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 3.6rem;
+  border-radius: 0.65rem;
+  border: 1px solid #262626;
+  background: #0b1016;
+}
+
+.kmap-cell--one {
+  background: rgba(15, 23, 42, 0.9);
+}
+
+.kmap-cell--zero {
+  color: #64748b;
+}
+
+.kmap-cell__minterm {
+  position: absolute;
+  top: 0.28rem;
+  left: 0.4rem;
+  color: #64748b;
+  font-size: 0.68rem;
+}
+
+.kmap-cell__value {
+  font-size: 1.25rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.kmap-cell__tags {
+  position: absolute;
+  right: 0.35rem;
+  bottom: 0.3rem;
+  display: flex;
+  gap: 0.2rem;
+}
+
+.kmap-cell__tags span {
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+}
+
+.kmap__groups-title {
+  margin: 1.15rem 0 0.55rem;
+  font-size: 1rem;
+}
+
+.kmap__groups {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.kmap__groups li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+}
+
+.kmap__swatch {
+  flex: 0 0 auto;
+  width: 0.85rem;
+  height: 0.85rem;
+  margin-top: 0.28rem;
+  border-radius: 999px;
+}
+
+.kmap__minterms {
+  color: #94a3b8;
+}
+
+.kmap__sop {
+  margin: 1rem 0 0;
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.65rem;
+  border: 1px solid #262626;
+  background: rgba(8, 12, 18, 0.55);
+}
+
+.kmap__sop span {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: #94a3b8;
+  font-size: 0.82rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kmap__summary::before {
+    transition: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .kmap {
+    padding: 0.25rem 1rem 1rem;
+  }
+
+  .kmap-cell {
+    min-height: 3.1rem;
+  }
+}
